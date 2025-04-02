@@ -1,0 +1,36 @@
+Logan Writeup
+
+
+CTF Writeup: Manipulating Cookies to Gain Admin Access
+Challenge Overview
+In this challenge, we are provided with a website that requires login credentials, which are given in the question. The goal is to manipulate the website’s cookies to obtain the flag.
+
+Steps to Solve the Challenge
+Step 1: Open the Website and Log In
+1. Navigate to the given website.
+2. Enter the provided username and password to log in.  
+Step 2: Open Developer Tools (Inspect Element)
+1. Right-click anywhere on the webpage and select Inspect.
+2. Alternatively, you can open the Developer Tools by pressing F12 or Ctrl + Shift + I (Windows/Linux) or Cmd + Option + I (Mac). 
+3. ￼
+  
+Step 3: Navigate to Application Tab
+1. In the Developer Tools panel, locate the Application tab.
+2. Under the Storage section on the left panel, click on Cookies.
+3. Click on the sub-option that appears under Cookies (this should correspond to the website's domain). 
+4. ￼
+ 
+Step 4: Modify the Admin Cookie
+1. In the cookies list, look for an entry with the Name admin.
+2. The Value for admin is set to False.
+3. Double-click on the value and change it to True.
+4. Press Enter to save the change. 
+Step 5: Refresh the Page
+1. After modifying the cookie, refresh the webpage.
+2. If done correctly, the website should now reveal the flag.
+
+Conclusion
+By modifying the cookie value from False to True, we were able to elevate our privileges and access the flag. This highlights how poorly implemented authentication mechanisms relying solely on client-side cookies can be exploited. 
+Key Takeaways:
+* Web applications should not store or rely on security-critical values in easily modifiable client-side storage.
+* Proper session management and server-side validation are necessary to prevent such vulnerabilities.
