@@ -1,0 +1,12 @@
+Robots Writeup 
+
+
+Title: Finding the Flag via robots.txt
+Introduction: In web security, the robots.txt file is used to instruct web crawlers on which pages they can or cannot index. However, it can sometimes expose hidden paths that may lead to sensitive information. This write-up explains how to leverage robots.txt to find a hidden flag in a Capture The Flag (CTF) challenge.
+
+Step 1: Accessing robots.txt To begin, open the target website in your browser. In the URL bar, append /robots.txt to the domain name and press Enter. For example:
+http://example.com/robots.txt
+This file typically contains directives like:
+User-agent: *
+Disallow: /hidden_path/
+The Disallow directive indicates restricted directories that web crawlers should not index. However, these paths may contain interesting information.
