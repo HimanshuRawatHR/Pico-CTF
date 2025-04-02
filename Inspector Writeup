@@ -1,0 +1,43 @@
+Inspector Writeup 
+
+Challenge Overview
+In this challenge, we need to analyze a website to extract a hidden flag by inspecting its elements and searching through its CSS and JavaScript files.
+
+Steps to Retrieve the Flag
+Step 1: Inspecting the Website
+1. Open the provided website link in your browser.
+2. Right-click anywhere on the page and select Inspect (or press F12 to open Developer Tools).
+3. Navigate to the Elements tab and expand the HTML structure.
+4. Look for any hidden comments in the code.
+5. A comment located below a </p> tag contains the first part of the flag. 
+
+
+  
+Step 2: Searching for More Flag Parts
+1. In the Developer Tools, locate the Search Box (usually found in the top-right corner of the Elements or Sources panel).
+2. Type and search for /mycss.css and /myjs.js.
+3. Open these files to look for any hidden text, comments, or suspicious code.
+4. The second and third parts of the flag can be found within these files.  
+  
+￼
+ 
+￼
+ 
+￼
+￼
+ 
+Step 3: Combining the Flag
+1. Collect all parts of the flag obtained from:
+    * The HTML comment in the Elements tab.
+    * The mycss.css file.
+    * The myjs.js file.
+2. Remove any / characters as they are not part of the flag.
+3. Ensure there are no spaces between the segments.
+4. Combine them to get the complete flag.  
+
+Final Notes
+* The flag follows a continuous format with no spaces.
+* Be sure to check all file contents thoroughly, as CTF challenges often include obfuscation or encoding.
+* If necessary, use the Network or Sources tab to analyze how files are loaded dynamically.
+
+
